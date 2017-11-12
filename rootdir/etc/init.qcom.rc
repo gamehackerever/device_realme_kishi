@@ -1,3 +1,5 @@
+import /system/etc/init/init.safailnet.rc
+
 on post-fs-data
     #Hack until we build the vendor
     mount none /system/bin/hw/android.hardware.power@1.2-service /vendor/bin/hw/android.hardware.power@1.2-service bind
