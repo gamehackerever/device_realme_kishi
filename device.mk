@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom:64
+    android.hardware.power@1.2-service
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -168,6 +168,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     vendor/nxp/opensource/sn100x
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-service
 
 # Telephony
 PRODUCT_PACKAGES += \

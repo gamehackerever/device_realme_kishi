@@ -168,11 +168,13 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
 
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+
 # Treble
 BOARD_VNDK_VERSION := current
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
