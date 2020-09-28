@@ -107,10 +107,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q6150-17263-1
 
-# Perf
+# Nfc
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=4 \
-    ro.vendor.qti.core_ctl_max_cpu=6
+    ro.nfc.port=I2C \
+    persist.nfc.smartcard.recorder.enable=true \
+    persist.sys.nfc.disPowerSave=1 \
+    ro.camera.notify_nfc=1
 
 # RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -148,11 +150,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.sensors.enable.mag_filter=true \
-    ro.display.underscreen.lightsensor.support=1 \
-    ro.lcd.display.screen.underlightsensor.region=624,28,672,76 \
-    persist.sys.oppo.fusionlight=true \
-    persist.sys.oppo.proximity=true \
     ro.qti.sensors.wu=false
 
 # SSR
