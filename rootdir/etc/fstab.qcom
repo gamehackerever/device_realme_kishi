@@ -6,6 +6,9 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
+/dev/block/bootdevice/by-name/boot                      /boot                  emmc    defaults                                             defaults
+/dev/block/bootdevice/by-name/recovery                  /recovery              emmc    defaults                                             defaults
+
 system                                                  /system                ext4    ro,barrier=1,discard                                 wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 vendor                                                  /vendor                ext4    ro,barrier=1,discard                                 wait,avb=vbmeta_vendor,logical,first_stage_mount
 oppo_product                                            /oppo_product          ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,nofail
