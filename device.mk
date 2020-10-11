@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service
+    android.hardware.power@1.2-service.rmx2081
 
 # QTI
 PRODUCT_COPY_FILES += \
