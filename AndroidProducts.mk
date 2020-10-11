@@ -15,4 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X2.mk
+    $(LOCAL_DIR)/lineage_RMX2081.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_RMX2081-eng \
+    lineage_RMX2081-userdebug \
