@@ -19,4 +19,4 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     lineage_RMX2081-eng \
-    lineage_RMX2081-userdebug \
+    lineage_RMX2081-userdebug
