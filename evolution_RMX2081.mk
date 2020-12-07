@@ -6,11 +6,15 @@
 
 $(call inherit-product, device/realme/RMX2081/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common evox stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_RMX2081
+PRODUCT_NAME := evolution_RMX2081
 PRODUCT_DEVICE := RMX2081
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme X3
