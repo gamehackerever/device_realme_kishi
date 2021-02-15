@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.rmx2081"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.kishi"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
 
 #include "BiometricsFingerprint.h"
 
-using android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint;
-using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
 using android::OK;
 using android::sp;
 using android::status_t;
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
+using android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint;
+using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
 
 int main() {
     sp<BiometricsFingerprint> biometricsFingerprint;
@@ -37,7 +37,8 @@ int main() {
 
     biometricsFingerprint = new BiometricsFingerprint();
     if (biometricsFingerprint == nullptr) {
-        LOG(ERROR) << "Can not create an instance of Fingerprint HAL Adapter BiometricsFingerprint Iface, exiting.";
+        LOG(ERROR) << "Can not create an instance of Fingerprint HAL Adapter "
+                      "BiometricsFingerprint Iface, exiting.";
         goto shutdown;
     }
 
@@ -45,7 +46,8 @@ int main() {
 
     status = biometricsFingerprint->registerAsService();
     if (status != OK) {
-        LOG(ERROR) << "Could not register service for Fingerprint HAL Adapter BiometricsFingerprint Iface ("
+        LOG(ERROR) << "Could not register service for Fingerprint HAL Adapter "
+                      "BiometricsFingerprint Iface ("
                    << status << ")";
         goto shutdown;
     }

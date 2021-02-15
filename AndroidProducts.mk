@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_RMX2081.mk
+    $(LOCAL_DIR)/wave_kishi.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_RMX2081-eng \
-    evolution_RMX2081-userdebug
+    wave_kishi-eng \
+    wave_kishi-userdebug

@@ -10,8 +10,8 @@ on post-fs-data
     mount none /dev/null /vendor/lib64/hw/lights.sm6150.so bind
     mount none /vendor/lost+found /vendor/overlay bind
     mount none /vendor/lost+found /vendor/euclid bind
-    mount none /system/lib/hw/android.hardware.sensors@1.0-impl.rmx2081.so /vendor/lib/hw/android.hardware.sensors@1.0-impl.so bind
-    mount none /system/lib64/hw/android.hardware.sensors@1.0-impl.rmx2081.so /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so bind
+    mount none /system/lib/hw/android.hardware.sensors@1.0-impl.kishi.so /vendor/lib/hw/android.hardware.sensors@1.0-impl.so bind
+    mount none /system/lib64/hw/android.hardware.sensors@1.0-impl.kishi.so /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so bind
 
 service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     override

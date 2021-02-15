@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/realme/RMX2081/RMX2081-vendor.mk)
+$(call inherit-product, vendor/realme/kishi/kishi-vendor.mk)
 
 # Define Dynamic Partition support
 PRODUCT_TARGET_VNDK_VERSION := 29
@@ -32,7 +32,7 @@ TARGET_LMKD_STATS_LOG := true
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-wave
 
 # Properties
 -include $(LOCAL_PATH)/vendor_props.mk
@@ -96,7 +96,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.rmx2081 \
+    android.hardware.biometrics.fingerprint@2.1-service.kishi \
     vendor.oppo.hardware.biometrics.fingerprint@2.1
 
 # Fingerprint
@@ -142,7 +142,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.rmx2081
+    android.hardware.power@1.2-service.kishi
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -182,10 +182,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
-
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
@@ -194,19 +190,14 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Lights
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/android.hardware.light@2.0-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin/hw/android.hardware.light@2.0-service \
-    $(LOCAL_PATH)/prebuilt/android.hardware.light@2.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.light@2.0-service.rc
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.kishi
 
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
-
-# Touch
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.rmx2081
 
 # Optimizations
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI

@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),RMX2081)
+ifeq ($(TARGET_DEVICE),kishi)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
