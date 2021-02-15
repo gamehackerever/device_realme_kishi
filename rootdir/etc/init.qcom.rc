@@ -24,3 +24,6 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,7
     setprop dalvik.vm.dex2oat-threads 6
+
+on property:ro.sf.lcd_density=*
+    setprop ro.sf.lcd_density 440
