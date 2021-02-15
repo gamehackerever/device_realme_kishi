@@ -17,13 +17,7 @@ PRODUCT_DEVICE := kishi
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme X3
 PRODUCT_MANUFACTURER := realme
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="kishi" \
-    PRODUCT_MODEL="kishi" \
-    PRODUCT_DEVICE="kishi"
-
-PRODUCT_GMS_CLIENTID_BASE := android-realme
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 # Fingerprint
 BUILD_FINGERPRINT := google/redfin/redfin:11/RQ1A.210205.004/7038034:user/release-keys
