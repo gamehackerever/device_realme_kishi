@@ -178,21 +178,13 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string name="config_mainBuiltInDisplayCutout">M -544,0 L -544,108 L -270,108 L -270,0 Z</string>
+    <string name="config_mainBuiltInDisplayCutout">M-436.5,33L-319.5,33A38.5,38.5 0,0 1,-281 71.5L-281,71.5A38.5,38.5 0,0 1,-319.5 110L-436.5,110A38.5,38.5 0,0 1,-475 71.5L-475,71.5A38.5,38.5 0,0 1,-436.5 33z M -475,0 L -283,0 Z M -540,0 L -540,113 Z</string>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">24dp</dimen>
+    <dimen name="status_bar_height_portrait">125px</dimen>
 
     <!-- Height of the status bar in landscape -->
-    <dimen name="status_bar_height_landscape">24dp</dimen>
-
-    <!-- Radius of the software rounded corners at the top of the display in its natural
-        orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_top">90px</dimen>
-
-    <!-- Radius of the software rounded corners at the bottom of the display in its natural
-        orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_bottom">94px</dimen>
+    <dimen name="status_bar_height_landscape">130px</dimen>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
