@@ -7,12 +7,12 @@
 # Inherit from kishi device
 $(call inherit-product, device/realme/kishi/device.mk)
 
-# Inherit some common WaveOS stuff
+# Inherit some common octaviOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/wave/configs/common.mk)
+$(call inherit-product, vendor/octavi/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := wave_kishi
+PRODUCT_NAME := octavi_kishi
 PRODUCT_DEVICE := kishi
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme X3

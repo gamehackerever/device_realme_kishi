@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/wave_kishi.mk
+    $(LOCAL_DIR)/octavi_kishi.mk
 
 COMMON_LUNCH_CHOICES := \
-    wave_kishi-eng \
-    wave_kishi-userdebug
+    octavi_kishi-eng \
+    octavi_kishi-userdebug
