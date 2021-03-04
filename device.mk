@@ -107,6 +107,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
+# HALS
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/sm8150/audio
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/sm8150/display
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/sm8150/media
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
@@ -165,7 +170,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    vendor/nxp/opensource/sn100x
+    vendor/nxp/opensource/sn100x \
+    hardware/qcom-caf/sm8150
 
 # Power
 PRODUCT_PACKAGES += \
