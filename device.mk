@@ -131,7 +131,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
-PRODUCT_COPY_FILES += \
+PRODUCT_PACKAGES += \
     android.hardware.input.classifier@1.0 \
     android.hardware.weaver@1.0 \
     android.hardware.authsecret@1.0
