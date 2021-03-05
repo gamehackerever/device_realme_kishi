@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := android.hardware.power@1.2-service.rmx206x
+LOCAL_MODULE := android.hardware.power@1.2-service.kishi
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin
