@@ -56,7 +56,9 @@ PRODUCT_TARGET_VNDK_VERSION := 29
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    tinymix
+    tinymix \
+    android.hardware.audio@6.0 \
+    android.hardware.audio.effect@6.0
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
@@ -64,7 +66,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothQti
+    BluetoothQti \
+    android.hardware.bluetooth.a2dp@1.0
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -128,6 +131,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
+PRODUCT_COPY_FILES += \
+    android.hardware.input.classifier@1.0 \
+    android.hardware.weaver@1.0 \
+    android.hardware.authsecret@1.0
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -149,9 +157,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
+    android.hardware.sensors@2.0 \
+    android.hardware.sensors@2.1
+
+# OemLock
+PRODUCT_PACKAGES += \
+    android.hardware.oemlock@1.0
+
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.kishi
+    android.hardware.power@1.2-service.kishi \
+    android.hardware.power.stats@1.0-service.mock
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -172,6 +192,21 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     vendor/nxp/opensource/sn100x \
     hardware/qcom-caf/sm8150
+
+# Sound Trigger
+PRODUCT_SOONG_NAMESPACES += \
+    android.hardware.soundtrigger@2.2
+
+# Vibration
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service \
+    android.hardware.vibrator@1.3
+
+# IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
 
 # Power
 PRODUCT_PACKAGES += \
@@ -209,6 +244,10 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb.gadget@1.0
 
 # Optimizations
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
